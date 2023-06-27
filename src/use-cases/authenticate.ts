@@ -2,6 +2,7 @@ import { compare } from "bcryptjs";
 import { UsersRepository } from "../repositories/users-repository";
 import { InvalidCredentialsError } from "./erros/invalid-credentials-error";
 import { User } from "@prisma/client"
+import { beforeEach } from "vitest";
 
 interface AuthenticateUseCaseRequest {
   email: string,
@@ -12,7 +13,10 @@ interface AuthenticateUseCaseResponse  {
     user: User
 }
 
+
+
 export class AuthenticateUseCase {
+    
     constructor(private usersRepository: UsersRepository) {
         
     }
