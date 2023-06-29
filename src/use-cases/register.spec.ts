@@ -10,11 +10,11 @@ let sut: RegisterUseCase
 describe('Register Use Case', () => {
 
     beforeEach(() => {
-         usersRepository = new InMemoryUsersRepository()
-         sut = new RegisterUseCase(usersRepository)
+        usersRepository = new InMemoryUsersRepository()
+        sut = new RegisterUseCase(usersRepository)
     })
 
-    it('should hash user password upon registration', async () => {
+    it('should be able to registration', async () => {
 
         const { user } = await sut.handle({
             name: 'John Doe',
