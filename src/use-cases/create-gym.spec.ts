@@ -18,8 +18,8 @@ describe('Register Gym Case', () => {
             title: 'Axe fit',
             description: null,
             phone: null,
-            latitude: 0,
-            longitude: 0
+            latitude: -27.2092052,
+            longitude: -49.6401091
         })
 
         expect(gym.id).toEqual(expect.any(String))
