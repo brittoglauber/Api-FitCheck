@@ -13,9 +13,6 @@ export async function authenticate(request: FastifyRequest, reply: FastifyReply)
 
     try {
 
-        // const prismaUsersRepository = new PrismaUsersRepository()
-        // const authenticateUseCase = new AuthenticateUseCase(prismaUsersRepository)
-
         const authenticateUseCase =  makeAuthenticateUseCase()
         const { user } = await authenticateUseCase.execute({ email, password})
 
@@ -37,6 +34,5 @@ export async function authenticate(request: FastifyRequest, reply: FastifyReply)
 
         throw err
     }
-
-    return reply.status(200).send()
+    
 }

@@ -20,6 +20,7 @@ export async function create(request: FastifyRequest, reply: FastifyReply) {
     const { latitude, longitude } = createCheckInBodySchema.parse(request.body)
   
     const checkInUseCase = makeCheckInUseCase()
+
   
     await checkInUseCase.execute({
       gymId,
