@@ -3,7 +3,7 @@ import { InMemoryCheckInsRepository } from "../repositories/in-memory/in-memory-
 import { CheckInUseCase } from "./check-in"
 import { InMemoryGymsRepository } from "../repositories/in-memory/in-memory-gyms-repository"
 import { Decimal } from "@prisma/client/runtime/library"
-import { MaxNumberOfCheckIInsError } from "./erros/max-number-of-check-ins--error"
+import { MaxNumberOfCheckInsError } from "./erros/max-number-of-check-ins--error"
 import { MaxDistanceError } from "./erros/max-distance-error"
 
 let checkInsRepository: InMemoryCheckInsRepository
@@ -65,7 +65,7 @@ describe('Register Use Case', () => {
                 userLatitude: 14.1640837,
                 userLongitude: -41.6481613
             }),
-        ).rejects.toBeInstanceOf(MaxNumberOfCheckIInsError)
+        ).rejects.toBeInstanceOf(MaxNumberOfCheckInsError)
 
     })
 
